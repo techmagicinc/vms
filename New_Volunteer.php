@@ -30,10 +30,15 @@ Welcome! Please fill out this form to start volunteering here at The Way Clinic!
      <td><input type = "text" name= "LastName"/></td>
      <td>
      <select name = "Category">
-  		<option value="Md">Medical Doctor</option>
- 		<option value="Rn">Registered Nurse</option>
-  		<option value="Admin">Administration</option>
-  		<option value="St">Student</option>
+  		<option value="Administrator Support">Admin Support</option>
+ 		  <option value="Counselor Mental Health">Counselor</option>
+  		<option value="Medical Doctor DO">Doctor</option>
+  		<option value="Nurse">Nurse</option>
+      <option value="PA">PA</option>
+      <option value="Pharmacist">Pharmacist</option>
+      <option value="Sonography">Sonographer</option>
+      <option value="Student Admin">Student Admin Support</option>
+      <option value="Student Nurse">Student Nurse</option>
 	</select>
 	</td>
 	<td><input type="submit" name="Add_Vol" value="Add"/></td>
@@ -43,3 +48,13 @@ Welcome! Please fill out this form to start volunteering here at The Way Clinic!
 </form>
 
 </html>
+
+Administrator support
+counselor mental health
+medical doctor DO
+Nurse
+PA
+Pharmacist
+Sonography
+Student Admin
+Student Nurse
