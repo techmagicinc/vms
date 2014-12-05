@@ -43,12 +43,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Admin Login</a></li>
+        <li class="active"><a href="timestamp.php">Home<span class="sr-only">(current)</span></a></li>
+        <li><a href="index.php">Admin Login</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Volunteer Services <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">New User Registration</a></li>
+            <li><a href="New_Volunteer.php">New User Registration</a></li>
             <li><a href="#">Contact Administrator</a></li>
             <li><a href="#">Profile Management</a></li>
             <li class="divider"></li>

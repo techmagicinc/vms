@@ -1,7 +1,7 @@
 <?php
 $username="root";
 $password="";
-$database="brad_vol";
+$database="timestamp";
 
 $con = mysql_connect('localhost',$username,$password);
 
@@ -18,8 +18,8 @@ $add_Cat = $_POST['Category'];
 if(isset($_POST['FirstName']) && isset($_POST['LastName']) 
 	&& isset($_POST['Category'])){
 	
-	$add_vol = "INSERT INTO brad_vol (`f_name`, `l_name`, 
-		`category`)
+	$add_vol = "INSERT INTO users (`fname`, `lname`, 
+		`Group`)
           VALUES
           ( '$add_Fname', '$add_Lname' ,'$add_Cat')";
 

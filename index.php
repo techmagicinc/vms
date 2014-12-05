@@ -12,11 +12,12 @@
 <center>Password: <input type="password" name="pass"></center><br>
 <br>
 
-
-<div align="center">
-<input name="remember" type="checkbox" id="remember" value="1">
-Remember me
-</div>
+<?php
+//<div align="center">
+//<input name="remember" type="checkbox" id="remember" value="1">
+//Remember me
+//</div>
+?>
 
 <br>
 <center><input type="submit" value="login" name="submit"></center>

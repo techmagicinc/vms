@@ -3,7 +3,7 @@
 
 $username="root";
 $password="";
-$database="admin_login";
+$database="timestamp";
 
 $con = mysql_connect('localhost',$username,$password);
 
@@ -12,6 +12,7 @@ if (!$con){
 }
 
 mysql_select_db($database,$con);
+
 
 if (isset($_POST['submit'])){
 $username=mysql_escape_string($_POST['uname']);
@@ -24,7 +25,7 @@ echo("<SCRIPT LANGUAGE='JavaScript'>
 	</SCRIPT>");
 exit();}
 
-$sql= mysql_query("SELECT * FROM `users` WHERE `username` = '$username' AND `password` ='$password'");
+$sql= mysql_query("SELECT * FROM `login` WHERE `username` = '$username' AND `password` ='$password'");
 
 if(mysql_num_rows($sql) > 0){
 $_session['user_id'] =$login;
