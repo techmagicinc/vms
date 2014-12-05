@@ -1,5 +1,18 @@
 <?php
-require ('connect.php');
+//require ('connect.php');
+
+$username="root";
+$password="";
+$database="admin_login";
+
+$con = mysql_connect('localhost',$username,$password);
+
+if (!$con){
+  die('Could not connect: '.mysql_error());
+}
+
+mysql_select_db($database,$con);
+
 if (isset($_POST['submit'])){
 $username=mysql_escape_string($_POST['uname']);
 $password=mysql_escape_string($_POST['pass']);
