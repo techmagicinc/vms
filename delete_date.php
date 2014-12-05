@@ -2,7 +2,7 @@
 
 $username="root";
 $password="";
-$database="brad_time";
+$database="timestamp";
 
 $con = mysql_connect('localhost',$username,$password);
 
@@ -12,10 +12,10 @@ if (!$con){
 
 mysql_select_db($database,$con);
 
-$del_date = $_POST['del_date'];
+$del_entry = $_POST['del_entry'];
 
-if(isset($_POST['del_date'])){
-	$del_sql = " DELETE FROM brad_time WHERE Time_date = '$del_date'";
+if(isset($_POST['del_entry'])){
+	$del_sql = " DELETE FROM timehistory WHERE ID = '$del_entry'";
 
 	if(!mysql_query($del_sql,$con)){
 		die('Error: '.mysql_error());

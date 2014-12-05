@@ -1,10 +1,18 @@
-<html>
-<head>
-<title>admin page</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<?php
 
-<link href="styles.css" rel="stylesheet" type="text/css">
-</head>
+$username="root";
+$password="";
+$database="timestamp";
+
+$con = mysql_connect('localhost',$username,$password);
+
+if (!$con){
+  die('Could not connect: '.mysql_error());
+}
+
+mysql_select_db($database,$con);
+
+?>
 
 <body>
 <table width="100%" border="0" cellspacing="0" cellpadding="5" class="main">
@@ -34,7 +42,7 @@
     <td width="160" valign="top">
 <div class="myaccount">
   <p><strong>Administration</strong></p>
-  <a href="maintenance.php">Maintenance</a><br>
+  <a href="home.php">Home</a><br>
 
     <td width="732" valign="top"><p>&nbsp;</p>
 	  
@@ -48,4 +56,4 @@
   </tr>
 </table>
 </body>
-</html>
+
