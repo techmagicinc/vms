@@ -1,4 +1,15 @@
-<html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+       <title>The Way Free Medical Clinic Volunteer Management</title>
+
 <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -9,9 +20,9 @@
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
  <!--    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> -->
 
-<head>
+</head>
 
-	<nav class="navbar navbar-default" role="navigation">
+  <nav class="navbar navbar-default" role="navigation">
 
   <div class="container-fluid">
 
@@ -31,70 +42,123 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="timestamp.php">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="index.php">Admin Login</a></li>
+       <li><a href="index.php">Admin Login</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Volunteer Services <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="New_Volunteer.php">New User Registration</a></li>
             <li><a href="contactform.html">Contact Administrator</a></li>
             <li><a href="edit_time.php">Profile Management</a></li>
-            <li><a href="reportscript.php">Reporting</a></li>
-            <!-- <li class="divider"></li>
+             <li><a href="reportscript.php">Reporting</a></li>
+         <!--    <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li class="divider"></li>
             <li><a href="#">One more separated link</a></li> -->
           </ul>
         </li>
       </ul>
-  
-  <!--     <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul> -->
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+  </div>
 </div>
-<body>
-<font>
-<center><h1>Admin Login</h1></center>
-<br>
-<br>
-</font>
-<form action="login.php" method="POST">
-<center>Username: <input type="text" name="uname"></center><br>
-<br>
-<center>Password: <input type="password" name="pass"></center><br>
-<br>
 
-<?php
-//<div align="center">
-//<input name="remember" type="checkbox" id="remember" value="1">
-//Remember me
-//</div>
-?>
 
-<br>
-<center><input type="submit" value="login" name="submit"></center>
-<br>
-
-<p>
-<center><a href="timestamp.php">  Volunteer Sign In </a><font color="#FF6600"></font></center>
-</p>
-
+<form name="contactform" method="post" action="send_form_email.php">
+ 
+<table width="450px">
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="first_name">First Name *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="first_name" maxlength="50" size="30">
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td valign="top"">
+ 
+  <label for="last_name">Last Name *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="last_name" maxlength="50" size="30">
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="email">Email Address *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="email" maxlength="80" size="30">
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="telephone">Telephone Number</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="telephone" maxlength="30" size="30">
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="comments">Comments *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td colspan="2" style="text-align:center">
+ 
+  <input type="submit" value="Submit">   <a href="#">Email Form</a>
+ 
+ </td>
+ 
+</tr>
+ 
+</table>
+ 
 </form>
-</body>
-</head>
-  <script src="js/jquery-1.11.1.min.js"></script>
+ <script src="js/jquery-1.11.1.min.js"></script>
   <!--   // <script src="//rawgithub.com/stidges/jquery-searchable/master/dist/jquery.searchable-1.0.0.min.js"></script> -->
     <script src="/js/search.js"></script>
   

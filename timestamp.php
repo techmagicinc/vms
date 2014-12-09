@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Landing Page - Start Bootstrap Theme</title>
+    <title>The Way Free Medical Clinic Volunteer Management</title>
 
 <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -49,12 +49,13 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Volunteer Services <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="New_Volunteer.php">New User Registration</a></li>
-            <li><a href="#">Contact Administrator</a></li>
-            <li><a href="#">Profile Management</a></li>
-            <li class="divider"></li>
+            <li><a href="contactform.html">Contact Administrator</a></li>
+            <li><a href="edit_time.php">Profile Management</a></li>
+            <li><a href="reportscript.php">Reporting</a></li>
+            <!-- <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">One more separated link</a></li> -->
           </ul>
         </li>
       </ul>
@@ -106,12 +107,30 @@
       <input  type="text" name="name">
       <input  type="submit" name="submit" value="Login">
     </form>
-    
-
-
 </p>
 </div>
+<?php
+    $con=mysqli_connect("localhost","root","","timestamp");
+    // Check connection
+    if (mysqli_connect_errno())
+      {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+      }
 
+    $result = mysqli_query($con,"SELECT * FROM timeclock");
+
+    while($row = mysqli_fetch_array($result))
+      {
+         
+    
+      echo '<td align="center">' . $row['fname'] . " " . $row['lname'];  //these are the fields that you have stored in your database table employee
+      echo $row['time'];
+      echo "<br />";
+      ECHO "</tr>\n";
+      }
+
+    mysqli_close($con);
+    ?>
 
 <!--         <div class="container">
 

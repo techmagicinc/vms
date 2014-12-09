@@ -1,17 +1,36 @@
-<html>
-<!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/custom.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
- <!--    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> -->
-
+<html lang="en">
 <head>
 
-	<nav class="navbar navbar-default" role="navigation">
+  <meta charset="utf-8">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+    <script type="text/javascript" language="javascript">
+            jQuery(function() {
+                jQuery( "#from" ).datepicker({
+                  defaultDate: "+1w",
+                  changeMonth: true,
+                  numberOfMonths: 1,
+                  onClose: function( selectedDate ) {
+                    $( "#to" ).datepicker( "option", "minDate", selectedDate );
+                  }
+                });
+                jQuery( "#to" ).datepicker({
+                  defaultDate: "+1w",
+                  changeMonth: true,
+                  numberOfMonths: 1,
+                  onClose: function( selectedDate ) {
+                    jQuery( "#from" ).datepicker( "option", "maxDate", selectedDate );
+                  }
+                });
+            });
+</script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <nav class="navbar navbar-default" role="navigation">
 
   <div class="container-fluid">
 
@@ -31,14 +50,14 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="timestamp.php">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="index.php">Admin Login</a></li>
+        <li><a href="login.php">Admin Login</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Volunteer Services <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="New_Volunteer.php">New User Registration</a></li>
             <li><a href="contactform.html">Contact Administrator</a></li>
             <li><a href="edit_time.php">Profile Management</a></li>
-            <li><a href="reportscript.php">Reporting</a></li>
+             <li><a href="reportscript.php">Reporting</a></li>
             <!-- <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li class="divider"></li>
@@ -64,37 +83,23 @@
   </div><!-- /.container-fluid -->
 </nav>
 </div>
-<body>
-<font>
-<center><h1>Admin Login</h1></center>
-<br>
-<br>
-</font>
-<form action="login.php" method="POST">
-<center>Username: <input type="text" name="uname"></center><br>
-<br>
-<center>Password: <input type="password" name="pass"></center><br>
-<br>
 
-<?php
-//<div align="center">
-//<input name="remember" type="checkbox" id="remember" value="1">
-//Remember me
-//</div>
-?>
 
-<br>
-<center><input type="submit" value="login" name="submit"></center>
-<br>
-
-<p>
-<center><a href="timestamp.php">  Volunteer Sign In </a><font color="#FF6600"></font></center>
-</p>
-
-</form>
-</body>
 </head>
-  <script src="js/jquery-1.11.1.min.js"></script>
+<body>
+ 
+    <form action='reportbutton.php' method="post">
+      <label style="margin: 0 10px 0 20px;" for="from">From</label>
+      <input style="padding: 3px; border-radius: 4px; opacity: none; background: #EEEEEE;" type="text" id="from" name="from" />
+      <label style="margin-left: 10px;" for="to">To</label>
+      <input style="padding: 3px; border-radius: 4px; background: #EEEEEE;" type="text" id="to" name="to" />
+      <input type="submit" value="Submit" name="reportbutton" />
+    </form>
+
+ 
+ 
+</body>
+  <!-- // <script src="/js/jquery-1.11.1.min.js"></script> -->
   <!--   // <script src="//rawgithub.com/stidges/jquery-searchable/master/dist/jquery.searchable-1.0.0.min.js"></script> -->
     <script src="/js/search.js"></script>
   
