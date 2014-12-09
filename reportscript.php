@@ -49,21 +49,23 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="timestamp.php">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="login.php">Admin Login</a></li>
+        <li class="active"><a href="maintenance.php">Maintenance<span class="sr-only"></span></a></li>
+        <li><a href="#">Messages</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Volunteer Services <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
+            <li><a href="timestamp.php">Volunteer Sign In</a></li>
             <li><a href="New_Volunteer.php">New User Registration</a></li>
-            <li><a href="contactform.html">Contact Administrator</a></li>
-            <li><a href="edit_time.php">Profile Management</a></li>
-             <li><a href="reportscript.php">Reporting</a></li>
             <!-- <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li class="divider"></li>
             <li><a href="#">One more separated link</a></li> -->
           </ul>
         </li>
+        <form action="logout.php" method="post">
+    <input name="return" type="hidden" value="<?php echo urlencode($_SERVER["PHP_SELF"]);?>" />
+        <li><a href = "index.php">Log Out</a></li>
+      </form>
       </ul>
   
   <!--     <ul class="nav navbar-nav navbar-right">

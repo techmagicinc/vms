@@ -29,7 +29,7 @@ $sql= mysql_query("SELECT * FROM `login` WHERE `username` = '$username' AND `pas
 
 if(mysql_num_rows($sql) > 0){
 $_session['user_id'] =$login;
-header('Location: home.php');
+header('Location: reportscript.php');
 exit();}
 
 else{
