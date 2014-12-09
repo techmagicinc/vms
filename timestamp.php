@@ -81,34 +81,43 @@
 
 <body>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12 col-md-4">
             <div class="page-header">
                 <h1>The Way Free Medical Clinic Volunteer Management System</h1>
+                        <h3>Please input your name</h3>
             </div>
             
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <h3>Please input your name</h3>
-        </div>
-    </div>
-
    
-
-  <p>
+   
+<div class="container-fluid">
     <body id="body-color">
+
 <div id="Sign-In">
     <!-- <h3>Search Volunteer Names</h3> -->
     <p>You may search either by first or last name</p>
-    <form  method="post" action="search.php?go"  id="searchform">
+   
+    <form  method="post" action="search.php?go"  id="searchform" class="form-horizontal">
+     <div class="control-group">
       <input  type="text" name="name">
       <input  type="submit" name="submit" value="Login">
     </form>
-</p>
+    </div>
+</div> 
 </div>
+<div class="table-responsive">
+          <table class="table table-bordered table-hover table-striped tablesorter">
+            <thead>
+            <tr>
+                <th>Name <i class="fa fa-sort"></i></th>
+                <th>Last Time Recorded <i class="fa fa-sort"></i></th>
+             
+              </tr>
+            </thead>
+                <tbody>
 <?php
     $con=mysqli_connect("localhost","root","","timestamp");
     // Check connection
@@ -117,45 +126,25 @@
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
       }
 
-    $result = mysqli_query($con,"SELECT * FROM timeclock");
+    $result = mysqli_query($con,"SELECT * FROM timehistory");
 
     while($row = mysqli_fetch_array($result))
       {
          
     
-      echo '<td align="center">' . $row['fname'] . " " . $row['lname'];  //these are the fields that you have stored in your database table employee
-      echo $row['time'];
+      echo '<td align="center">' . " " . $row['lname'];  //these are the fields that you have stored in your database table employee
+      echo '<td>'.$row['timeout'].'</td>';
       echo "<br />";
       ECHO "</tr>\n";
       }
 
+
     mysqli_close($con);
     ?>
+        </tbody>
 
-<!--         <div class="container">
+          </table>
 
-            <div class="row">
-                <div class="col-lg-12 offset-1">
-                    <div class="intro-message">
-                      
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="timestamp.php" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Volunteer Clock In/Out</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">New Volunteer Registration</span></a>
-                            </li>
-                           <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Manager Login</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div> -->
-
-        
-        <!-- /.container -->
 
     </div>
     <script src="js/jquery-1.11.1.min.js"></script>
